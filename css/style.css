@@ -152,9 +152,15 @@ svg {
     margin: 0;
 }
 
-li {
+a {
+    text-decoration: none;
+    color: inherit;
     display: flex;
     margin-bottom: 1rem;
+}
+
+a:hover {
+    background-color: var(--yellow);
 }
 
 
