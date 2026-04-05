@@ -177,7 +177,7 @@ a:hover {
     order: 1;
 }
 
-.header svg {
+.header svg{
     fill: var(--black);
     width: 1.5rem;
     height: auto;
@@ -239,15 +239,57 @@ button:hover {
     cursor: pointer;
 }
 
-.notifications svg:hover {
+.notifications svg:hover, .icons svg:hover {
     fill: var(--yellow);
     cursor: pointer;
 }
 
+/* main-content styles... */
 .main {
     background-color: var(--grey);
     /* grid-column: 2 / 3;
     grid-row: 2 / 3; */
     grid-area: 2 / 2 / 3 / 3;
+
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    padding: 2.5rem 1.5rem;
+    gap: 1.5rem 2.5rem;
 }
 
+.projects {
+    grid-row: span 2;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2% 1fr 1fr 1fr;
+    gap: 2rem 2rem;
+}
+.projects>h2 {
+    grid-column: span 2;
+}
+
+.card.project {
+    background-color: var(--text-color-white);
+    height: 100%;
+    padding: 2.5rem 1.5rem;
+    border-left: 8px solid var(--yellow);
+    border-radius: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.icons {
+    align-self: end;
+    display: flex;
+}
+
+.icons svg {
+    fill: inherit;
+}
+
+.main h2 {
+    font-weight: 600;
+}
