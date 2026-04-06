@@ -192,7 +192,7 @@ img {
     border-radius: 50%;
 }
 
-.notifications img {
+.notifications img, .trending img {
     width: 3.5rem;
     height: 3.5rem;
 }
@@ -253,6 +253,7 @@ button:hover {
 
     display: grid;
     grid-template-columns: 7fr 3fr;
+    grid-template-rows: 1fr 1fr;
     padding: 2.5rem 1.5rem;
     gap: 1.5rem 2.5rem;
 }
@@ -279,6 +280,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 4px 4px 8px #19181533;
 }
 
 .icons {
@@ -292,4 +294,47 @@ button:hover {
 
 .main h2 {
     font-weight: 600;
+}
+
+/* accouncement panel... */
+.announcements {
+    color: var(--black);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 1fr;
+}
+
+.announcements p {
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.7rem;
+}
+
+.announcements h3 {
+    font-size: 1rem;
+}
+
+.card.announcement {
+    background-color: var(--text-color-white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    display: grid;
+    row-gap: 1.5rem;
+    box-shadow: 4px 4px 8px #19181533;
+}
+
+.trending {
+    display: grid;
+    grid-template-rows: 10% 1fr;
+}
+
+.card.trending {
+    background-color: var(--text-color-white);
+    padding: 1.5rem;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr / 1fr 4fr;
+    align-items: center;
+    box-shadow: 4px 4px 8px #19181533;
+    border-radius: 0.5rem;
 }
